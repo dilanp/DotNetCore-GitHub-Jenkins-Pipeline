@@ -74,3 +74,11 @@ Setup the build pipeline
 - Click "Save".
 - NoW we can build the project: app-project > Build Now.
 - Notice the "Build History" shown below. The "Console Output" dropdown option should be consulted when we come across build errors!
+
+Enable CI for the pipeline
+==========================
+- On the Jenkins VM add an Network Security Group (NSG) Inbound Rule to allow 8080 port.
+- On the Jenkins VM Windows Firewall, add an Inbound Rule to open the 8080 port.
+- Create a Jenkins API token: Jenkins > Admin > Configure > API token > Add new Token.
+  - Copy the token immediately as we won't get it again!
+- Create a webhook in GitHub to trigger build on Jenkins.
